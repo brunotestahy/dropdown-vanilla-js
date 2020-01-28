@@ -3,8 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Dropdown Vanilla JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .dropdown-menu { 
+            display: block; 
+            opacity: 0;
+            transition: opacity linear 0.1s;
+            z-index: -1000;
+        }
+        .dropdown-menu.show { 
+            opacity: 1;
+            z-index: 1000;               
+        }
+        #note { padding-top: 15px;}
+    </style>
 </head>
 <body>
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">El Pagodão</a>
+    </nav>
+    <main role="main" class="bg-light" style="height: 200px" >
+        <div class="container" style="padding-top: 50px">
+            <p>O Pagodão é um colectivo de pessoas felizes.
+                <br>Queres conhecer os queridos participantes?
+            </p>
+            <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton">
+                  Dropdown
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown">
+                  <a class="dropdown-item" href="#">Bruce</a>
+                  <a class="dropdown-item" href="#">Coraline</a>
+                  <a class="dropdown-item" href="#">Dânia</a>
+                  <a class="dropdown-item" href="#">Marlene</a>
+                  <a class="dropdown-item" href="#">Norberta</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
 </body>
 </html>
