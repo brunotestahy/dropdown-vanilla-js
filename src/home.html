@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
     <title>Dropdown Vanilla JS</title>
 </head>
-<body>
-
+<body style="background-color: bisque">
+    <script src="app.js"></script>
+        <div id="dropdown" class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" 
+                type="button" 
+                data-toggle="dropdown" 
+                onclick="app()">Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
 </body>
 </html>
